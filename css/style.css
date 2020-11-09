@@ -181,3 +181,14 @@ footer{
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
+  }
+}
