@@ -32,7 +32,7 @@ h4{
  }
 
 p {
-  margin: 5px 5px;
+  margin: 5px auto 5px auto;
 }
 
 a:link {
@@ -62,7 +62,7 @@ a:visited {
 }
 
 .nav_links a.selected:active{
-  font-weight: bold;
+  font-weight: bolder; 
 }
 
 
@@ -110,6 +110,11 @@ ul {
   text-align: right;
 }
 
+.dissertation{
+  grid-column: 2 / -1;
+  grid-row: 2 / auto;
+} 
+
 .about-me-photo{
   float: left;
   height: auto;
@@ -117,22 +122,34 @@ ul {
 }
 
 .about-me-text {
-  padding-right: 5px;
+  padding-left: 5px;
+  margin-left: 5px;
 }
 
-.about-me h2, .articles, .articles h2, .secondary, .secondaryh2{
+.about-me h2, .dissertation h2 {
   text-align: right;
 }
 
-.education, .secondary {
+.education, .secondary, .articles {
   grid-row: 3 / auto;
   grid-column: 1 / span 3;
 }
 
-.contact-info, .contact-info h2, .university{
+.secondary, .secondaryh2 {
+  text-align: left;
+}
+
+
+.contact-info, .contact-info h2, .university {
   text-align: right;
   grid-row: 4 / auto;
   grid-column: 3 / -1;
+}
+
+.reviews {
+  text-align: right;
+  grid-row: 4 / auto;
+  grid-column: 2 / -1;
 }
 
 nav{
