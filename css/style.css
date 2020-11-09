@@ -1,7 +1,7 @@
 body {
   background-image: url("../images/background.jpg");
-  background-attachment: fixed; /* Parallax effect */     
-  background-size: cover;       /* Parallax effect */
+  background-attachment: fixed;     
+  background-size: cover;
   font-family: 'Cormorant', serif;
   font-size: 16pt;
   line-height: 1.5; 
@@ -33,7 +33,6 @@ h4{
 
 p {
   margin: 5px 5px;
-
 }
 
 a:link {
@@ -44,10 +43,6 @@ a:link {
 a:visited {
   color: #CCD1D1;
   text-decoration-style: dotted;
-}
-
-a.active-page{
-  font-weight: bold;
 }
 
 .nav_links a:link{
@@ -66,6 +61,11 @@ a.active-page{
   text-decoration: underline;
 }
 
+.nav_links a.selected:active{
+  font-weight: bold;
+}
+
+
 ul {
   list-style-position: outside;
 }
@@ -83,7 +83,7 @@ ul {
   border: 5px dashed black;
   margin: 30px;
   grid-column: 1 / -1;  
-  grid-row: 1 / 1;   /*Can you rewrite it?*/ 
+  grid-row: 1 / 1; 
 }
 
 .banner p{
@@ -99,27 +99,40 @@ ul {
   margin: 30px;
 }
 
-.about-me{
-  grid-column: 2 / auto;
+.about-me {
+  grid-column: 2 / -1;
   grid-row: 2 / auto;
 } 
+
+.editing {
+  grid-column: 3 / -1;
+  grid-row: 2 / auto;
+  text-align: right;
+}
 
 .about-me-photo{
   float: left;
   height: auto;
+  padding-right: 5px;
 }
 
-.about-me-text, .about-me h2, .articles, .articles h2, .secondary, .secondaryh2{
+.about-me-text {
+  padding-right: 5px;
+}
+
+.about-me h2, .articles, .articles h2, .secondary, .secondaryh2{
   text-align: right;
 }
 
-.education {
+.education, .secondary {
   grid-row: 3 / auto;
+  grid-column: 1 / span 3;
 }
 
-.contact-info, .contact-info h2{
+.contact-info, .contact-info h2, .university{
   text-align: right;
   grid-row: 4 / auto;
+  grid-column: 3 / -1;
 }
 
 nav{
