@@ -18,7 +18,7 @@
         <div class="skip"><a href="#main">Skip to Main Content</a></div>
       <nav>
           <ul class="nav_links">
-            <li class="nav_item"><a href="index.html" class="selected">About</a></li>
+            <li class="nav_item"><a class="current" href="index.html">About</a></li>
             <li class="nav_item"><a href="publications.html">Publications</a></li>
             <li class="nav_item"><a href="career.html">Career History</a></li>
             <li class="nav_item"><a href="photos.html">Travel Photos</a></li>
@@ -35,11 +35,13 @@
    <div class="about-me"> 
    <h2>About Me</h2>
    <div class="about-me-photo">
-    <img src="images/selfportraitbw.jpg" alt="black and white photo of my face (fair-skinned, short blond hair, blue eyes, serious expression)" width="300">
+    <img src="images/selfportrait.jpg" alt="black and white photo of my face (fair-skinned, short blond hair, blue eyes, serious expression)" width="300">
   </div>
-    <div class="about-me-text"><p>I haven't written this section yet, so here's some filler. Fun fact: this text comes from Cicero's <i>De Finibus Bonorum et Malorum</i> and has been used for dummy text for over five hundred years.</p>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a semper velit, nec porta lectus. Phasellus molestie, dolor eu consectetur semper, tellus enim pellentesque libero, eu lobortis ipsum orci fermentum risus. Pellentesque tempor efficitur turpis id varius. Sed nisi metus, aliquet quis metus vel, vulputate fringilla neque. Duis non ante sed ligula feugiat placerat. Nunc placerat rhoncus turpis eu commodo. Pellentesque posuere eget tortor sit amet varius. Nam aliquet eget tellus a faucibus. Nullam imperdiet nisl eget metus molestie tempor. Curabitur malesuada risus at semper tristique. Suspendisse potenti. Maecenas id sapien gravida, dignissim dolor sit amet, fermentum ex. Donec vel urna et leo lobortis ornare et ut mauris. Duis sit amet auctor lorem, et interdum quam.</p>
+    <div class="about-me-text"><p>I am a master's student at the <a href="https://www.si.umich.edu/">University of Michigan School of Information</a>, specializing in Library Science and Archives. Before beginning my current course of study, I completed a doctorate in English literature at <a href="https://www.slu.edu/">Saint Louis University</a>. During my years as a doctoral student, I served an internship at the <a href="https://www.slu.edu/arts-and-sciences/medieval-renaissance-studies/index.php">Center for Medieval and Renaissance Studies</a>, in which I worked in both <a href="https://www.slu.edu/library/special-collections/rare-books.php">Rare Books</a>, cataloging items from the Moore Carpenter Recusant History Collection, and the <a href="https://www.slu.edu/library/special-collections/vatican-film-library/index.php">Vatican Film Library</a>. I have also published a number of <a href="publications.html">scholarly articles</a>.</p>
+    <br/>
+      <p>I also work as a freelance copy editor and proofreader and have done work for <a href="https://press.princeton.edu/">Princeton University Press</a>. If you need a proofreader for your thesis or manuscript, feel free to <a href="#contact-me">contact me</a>! I'm particularly interested in/qualified to comment on medieval and early modern European subjects, but will proofread anything. I'm less interested in editing fiction, though. Languages I read other than English (for the purposes of proofreading English-language texts dealing with quotations in other languages) include French, Latin, and Old and Middle English; I also have some rudimentary German and Czech.</p>
+      <br/>
+      <p>In my spare time, I enjoy writing, theater, traveling, and music. I play piano, guitar, mandolin, tinwhistle, bowed psaltery, and autoharp (albeit none of them all that well) and have been singing in choirs for nearly thirty years. Before the COVID-19 pandemic I sang with the <a href="https://cms.msu.edu/el/programs/adults/choral-union.html">MSU Choral Union</a> and hope to return when group singing is safe again.</p>
       </div>
   </div>
 
@@ -61,9 +63,47 @@
     </dl>
   </div> 
   
-  <div class="contact-info">
-    <h2>Contact Me</h2>
-    <p><a href="mailto:frostl@umich.edu">Email</a> | <a href="http://twitter.com/frostillicus3">Twitter</a> | <a href="https://www.linkedin.com/in/lea-frost-8b23191b2/">LinkedIn</a> | <a href="https://www.facebook.com/frostll/">Facebook</a></p>
+  <div class="contact-info" id="contact-me">
+      <h2>Contact Me</h2>
+
+      <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/cardfront.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h1>Contact Information</h1>
+
+              <p><a href="mailto:frostl@umich.edu">Email</a><br/>
+                <a href="https://www.linkedin.com/in/lea-frost-8b23191b2/">LinkedIn</a><br/>
+                <a href="http://twitter.com/frostillicus3">Twitter</a><br/>
+                <a href="https://www.facebook.com/frostll/">Facebook</a></p>
+                <br/>
+                <p>Proofreading rates begin at $18 per hour.</p>
+
+              
+            </div>
+          </div>
+        </div>
+
+    <form action="https://formspree.io/f/xzbkjvee" method="POST">
+      <fieldset>
+        <legend>Or use this handy form!</legend>
+        <label for="name_id">Your Name</label>
+        <input type="text" placeholder="Enter your name" id="name_id" name="name" required>
+        
+        <label for="email_id">Your Email</label>
+        <input type="email" placeholder="Enter your email" id="email_id" name="email" required> 
+    
+        <label for="message_id"> Leave A Message</label>
+        <textarea id="message_id" name="message"></textarea> 
+        <br/>
+        <input type="checkbox" checked="checked" name="remember" id="cBox"> 
+        <label for="cBox">Remember me</label>
+       
+        <input type="submit" value="Contact Me">
+      </fieldset>
+     </form>
   </div>
 
     

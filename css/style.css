@@ -37,12 +37,17 @@ p {
 
 a:link {
   color: #424949;
-  text-decoration-style: dashed;
+  text-decoration-style: underline;
 }
 
 a:visited {
-  color: #CCD1D1;
-  text-decoration-style: dotted;
+  color: lightslategray;
+  text-decoration-style: underline;
+}
+
+a:hover{
+  color: #ffd700;
+  text-decoration-style: underline;
 }
 
 .nav_links a:link{
@@ -54,15 +59,13 @@ a:visited {
 }
 
 .nav_links a:hover{
-  color: #ffff00;
-}
-
-.nav_links a:active{
+  color: #ffd700;
   text-decoration: underline;
 }
 
-.nav_links a.selected:active{
-  font-weight: bolder; 
+.nav_links a.current{
+  font-weight: bolder;
+
 }
 
 .skip a{
@@ -72,14 +75,9 @@ a:visited {
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-
-  /*Your code here*/
   position: absolute;
   top: -50px;
 }
-
-/*Your Code Here*/
-/*Write selector/rule property to position the skip class element*/
 
 .skip a:focus{
   top: 0px;
@@ -89,8 +87,72 @@ ul {
   list-style-position: outside;
 }
 
+form{
+  border: 2px solid black;
+  background-color: #CCD1D1;
+  
+}
+
+legend{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+label{
+  display: inline-block;
+  margin-right: 8px;
+}
+
+input{
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 8px;
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+input:focus{
+  border: 2px solid #ffd700;
+
+}
+
+span{
+  margin-left:20%;
+  font-family: italic;
+  font-weight: bold;
+}
+
+textarea{
+  width: 90%;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 8px;
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+
+input[type=checkbox]{
+    display:inline;
+    width:inherit;
+
+}
+
+input[type=submit] {
+  background-color: #ffd700;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
 .container{
-  /*Your Code Here*/
   display: grid;
   grid-row-gap: 10px;
   grid-template-columns: auto auto auto auto;
@@ -137,12 +199,13 @@ ul {
 .about-me-photo{
   float: left;
   height: auto;
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .about-me-text {
-  padding-left: 5px;
-  margin-left: 5px;
+  padding-left: 10px;
+  margin-left: 10px;
+  line-height: normal;
 }
 
 .about-me h2, .dissertation h2 {
@@ -171,16 +234,85 @@ ul {
   grid-column: 2 / -1;
 }
 
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  padding: 0px 0px 20px;
+  grid-column: 5 / auto;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border: 1px solid black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #ffd700;
+  color: black;
+  border: 1px solid black;
+  transform: rotateY(180deg);
+}
+
+.flip-card h1{
+  font-size: 1em;
+}
+
+.flip-card p{
+  font-size: 1em;
+  line-height: 1;
+}
+
+.flip-card a{
+  color: #424949;
+  text-decoration: underline solid;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75em;
+}
+
 .gallery{
-  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-  align-content: space-around;
   flex-wrap: wrap;
   margin: 10px 10px;
   padding: 10px 10px;
-  /*Your code here again.*/
+} 
+
+.gallery a:hover{
+  opacity: 0.75;
+}
+
+.gallery img:hover{
+  border: 5px solid #ffd700;
 }
 
 nav{
@@ -202,6 +334,10 @@ nav a{
   font-weight: bold;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif; 
+}
+
+nav a.active{
+  font-weight: bolder;
 }
 
 footer{
