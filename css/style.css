@@ -348,3 +348,21 @@ footer{
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
+
+@media screen and (min-width: 850px){
+  /* Navbar */
+  header{
+    /*Your code here again.*/
+    flex-direction: row; 
+    justify-content: space-between; 
+  }
+
+  .nav_links{
+    /*Your code here again.*/ 
+    flex-direction: row; 
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+}
